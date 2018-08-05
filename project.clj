@@ -1,5 +1,3 @@
-(ns project)
-
 (defproject clojure_project_webapp "0.1.0-SNAPSHOT"
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
@@ -12,9 +10,7 @@
                  [de.ubercode.clostache/clostache "1.4.0"]
                  [ring-basic-authentication "1.0.5"]]
   :plugins [[lein-ring "0.9.7"]]
-  :ring {:handler clojure-webapp.core/-main}
+  :ring {:handler clojure-project-webapp.core/-main}
   :profiles
   {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
                         [ring-mock "0.1.5"]]}})
-
-
