@@ -15,6 +15,8 @@
            (route/resources "/")
            (GET "/index" [] (controller/index))
            (route/resources "/")
+           (GET "/transactions" [] (controller/transactions))
+           (route/resources "/")
            (GET "/homepage" [] (controller/home))
            (route/resources "/")
            (GET "/allTransactions" [] (controller/allTransactions))

@@ -24,6 +24,12 @@
 (defn allFiles []
   (render-template "allFiles" {:file (file-domain/allFiles)}))
 
+(defn transactions[]
+  (render-template "transactions" {:transaction (transaction-domain/allTransactions)}))
+
+(defn files []
+  (render-template "allFiles" {:file (file-domain/allFiles)}))
+
 (defn updatingTransaction [id]
   (render-template "updateTransaction" {:transaction (transaction-domain/get id)}))
 
