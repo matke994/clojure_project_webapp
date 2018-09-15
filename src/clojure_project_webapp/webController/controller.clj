@@ -5,6 +5,7 @@
     [clojure-project-webapp.domain.transaction :as transaction-domain]
     [clojure-project-webapp.domain.bank :as bank-domain]
     [clojure-project-webapp.domain.customer :as customer-domain]
+    [clojure-project-webapp.domain.bankcustomer :as bankcustomer-domain]
     ))
 
 (defn read-template [template-name]
@@ -51,6 +52,7 @@
 (defn updatingCustomer [id]
   (render-template "updateCustomer" {:customer (customer-domain/get id)}))
 
-
+(defn allBanksCustomers []
+  (render-template "allBanksCustomers" {:bankcustomer (bankcustomer-domain/allBanksCustomers)}))
 
 
