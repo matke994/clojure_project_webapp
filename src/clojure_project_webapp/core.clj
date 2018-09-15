@@ -9,7 +9,9 @@
             [clojure-project-webapp.domain.transaction :as transaction-domain]
             [clojure-project-webapp.domain.bank :as bank-domain]
             [clojure-project-webapp.domain.customer :as customer-domain]
-            [clojure-project-webapp.webController.controller :as controller]))
+            [clojure-project-webapp.webController.controller :as controller]
+            [clojure-project-webapp.domain.bankcustomer :as bankcustomer-domain]
+            ))
 
 
 (defroutes public-routes
@@ -29,6 +31,9 @@
            (route/resources "/")
            (GET "/allCustomers" [] (controller/allCustomers))
            (route/resources "/")
+           (GET "/allBanksCustomers" [] (controller/allBanksCustomers))
+           (route/resources "/")
+
 
 
            (GET "/domain/transactions/:id/remove" [id]
