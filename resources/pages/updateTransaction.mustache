@@ -99,48 +99,48 @@
                                     </h2>
                                     <div class="clearfix"></div>
                                 </div>
-                                    <form action="/domain/transactions/{{transaction.txn_id}}/update" method="post">
-                                        <div class="form-group">
-                                            <label for="year">Transaction type</label>
-                                            <input type="text" class="form-control" name="TXN_TYPE"
-                                                   value="{{transaction.txn_type}}"/>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="horsepower">PAN</label>
-                                            <input type="text" class="form-control" name="PAN"
-                                                   value="{{transaction.pan}}"/>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="horsepower">Acquirer BIN</label>
-                                            <input type="text" class="form-control" name="ACQ_BIN"
-                                                   value="{{transaction.acq_bin}}"/>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="horsepower">Transaction online date</label>
-                                            <input type="text" class="form-control" name="TXN_ONLINE_DATE"
-                                                   value="{{transaction.txn_online_date}}"/>
-                                        </div>
+                                <form action="/domain/transactions/{{transaction.txn_id}}/update" method="post">
+                                    <div class="form-group">
+                                        <label for="year">Transaction type</label>
+                                        <input type="text" class="form-control" name="TXN_TYPE"
+                                               value="{{transaction.txn_type}}"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="horsepower">PAN</label>
+                                        <input type="text" class="form-control" name="PAN"
+                                               value="{{transaction.pan}}"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="horsepower">Acquirer BIN</label>
+                                        <input type="text" class="form-control" name="ACQ_BIN"
+                                               value="{{transaction.acq_bin}}"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="horsepower">Transaction online date</label>
+                                        <input type="text" class="form-control" name="TXN_ONLINE_DATE"
+                                               value="{{transaction.txn_online_date}}"/>
+                                    </div>
 
-                                        <div class="form-group">
-                                            <label for="horsepower">Transaction amount</label>
-                                            <input type="text" class="form-control" name="TXN_AMOUNT"
-                                                   value="{{transaction.txn_amount}}"/>
-                                        </div>
+                                    <div class="form-group">
+                                        <label for="horsepower">Transaction amount</label>
+                                        <input type="text" class="form-control" name="TXN_AMOUNT"
+                                               value="{{transaction.txn_amount}}"/>
+                                    </div>
 
-                                        <div class="form-group">
-                                            <label for="horsepower">Transaction currency</label>
-                                            <input type="text" class="form-control" name="TXN_CURRENCY"
-                                                   value="{{transaction.txn_currency}}"/>
-                                        </div>
+                                    <div class="form-group">
+                                        <label for="horsepower">Transaction currency</label>
+                                        <input type="text" class="form-control" name="TXN_CURRENCY"
+                                               value="{{transaction.txn_currency}}"/>
+                                    </div>
 
-                                        <div class="form-group">
-                                            <label for="horsepower">File ID</label>
-                                            <input type="text" class="form-control" name="FILE_ID"
-                                                   value="{{transaction.file_id}}"/>
-                                        </div>
+                                    <div class="form-group">
+                                        <label for="horsepower">File ID</label>
+                                        <input type="text" class="form-control" name="FILE_ID"
+                                               value="{{transaction.file_id}}"/>
+                                    </div>
 
-                                        <button type="submit" class="btn btn-danger">Save update</button>
-                                    </form>
+                                    <button type="submit" class="btn btn-danger">Save update</button>
+                                </form>
                             </div>
                         </div>
 
