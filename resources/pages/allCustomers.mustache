@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Clojure project webapp - files</title>
+    <title>Clojure project webapp - customers</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -51,9 +51,9 @@
                     <div class="menu_section">
                         <h3>General</h3>
                         <ul class="nav side-menu">
-                            <li><a><i class="fa fa-bank"></i> Files <span class="fa fa-chevron-down"></span></a>
+                            <li><a><i class="fa fa-transaction"></i> Transactions <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="/allFiles">All files</a></li>
+                                    <li><a href="/allTransactions">All transactions</a></li>
                                 </ul>
                             </li>
                             <li><a><i class="fa fa-edit"></i> Files <span class="fa fa-chevron-down"></span></a>
@@ -105,19 +105,18 @@
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="x_panel">
                                 <div class="x_title">
-                                    <h2>FILES
+                                    <h2>CUSTOMERS
                                     </h2>
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content">
-                                    <p class="text-muted font-13 m-b-30">The table show all interests</p>
-                                    <table id="datatable-file" class="table table-striped table-bordered">
+                                    <p class="text-muted font-13 m-b-30">The table show all available customers</p>
+                                    <table id="datatable-transactions" class="table table-striped table-bordered">
                                         <thead>
                                         <tr>
-                                            <th>File ID</th>
-                                            <th>File name</th>
-                                            <th>File size</th>
-                                            <th>Import date</th>
+                                            <th>Customer ID</th>
+                                            <th>Name</th>
+                                            <th>Address</th>
                                             <th>Update &nbsp;</th>
                                             <th>Delete &nbsp;</th>
                                         </tr>
@@ -125,20 +124,19 @@
 
                                         <tbody>
 
-                                        {{#file}}
+                                        {{#customer}}
                                             <tr data-row-subject-id="">
-                                                <td>{{file_id}}</td>
-                                                <td>{{file_name}}</td>
-                                                <td>{{file_size)}}</td>
-                                                <td>{{import_date}}</td>
-                                                <td><a href="/domain/files/{{file_id}}/update"><i class="fa fa-pencil-square-o"></i></a></td>
-                                                <td><a href="/domain/files/{{file_id}}/remove"><i class="fa fa-remove"></i></a></td>
+                                                <td>{{customer_id}}</td>
+                                                <td>{{name}}</td>
+                                                <td>{{address}}</td>
+                                                <td><a href="/domain/customers/{{customer_id}}/update"><i class="fa fa-pencil-square-o"></i></a></td>
+                                                <td><a href="/domain/customers/{{customer_id}}/remove"><i class="fa fa-remove"></i></a></td>
                                             </tr>
-                                        {{/file}}
+                                        {{/customer}}
                                         </tbody>
                                     </table>
                                 </div>
-                                <p>Want to add new file? <button class="btn btn-primary" id="addFile" onclick="addNewFile()">Add new file</button> </p>
+                                <p>Want to add new Customer? <button class="btn btn-primary" id="addCustomer" onclick="addNewCustomer()">Add new customer</button> </p>
                             </div>
                         </div>
 

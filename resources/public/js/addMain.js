@@ -63,4 +63,54 @@ function addNewFile() {
 
         }
     });
+
+function addNewBank() {
+    $.confirm({
+        title: 'Add new bank',
+        content: '<form action="/domain/banks/insert" method="post">' +
+        '<div class="form-group">'+
+        '<label>Bank ID</label>'+
+        ' <input type="number" class="form-control" name="bank_id" placeholder="Bank ID">'+
+        ' </div>'+
+        '<div class="form-group">'+
+        '<label>Name</label>' +
+        '<input type="text" class="form-control" name="name" placeholder="Name">' +
+        '</div>' +
+        '<div class="form-group">' +
+        ' <label>Account</label>' +
+        '<input type="text" class="form-control" name="account" placeholder="Account">' +
+        '</div>'+
+        '<button style="float: right" type="submit" class="btn btn-success" style="float:right">Add bank</button>' +
+        '</form>',
+
+        cancel: function(){
+
+        }
+    });
 }
+
+function addNewCustomer() {
+    $.confirm({
+        title: 'Add new customer',
+        content: '<form action="/domain/customers/insert" method="post">' +
+        '<div class="form-group">'+
+        '<label>Customer ID</label>'+
+        ' <input type="number" class="form-control" name="customer_id" placeholder="Customer ID">'+
+        ' </div>'+
+        '<div class="form-group">'+
+        '<label>Name</label>' +
+        '<input type="text" class="form-control" name="name" placeholder="Name">' +
+        '</div>' +
+        '<div class="form-group">' +
+        ' <label>Address</label>' +
+        '<input type="text" class="form-control" name="address" placeholder="Address">' +
+        '</div>'+
+        '<button style="float: right" type="submit" class="btn btn-success" style="float:right">Add customer</button>' +
+        '</form>',
+
+        cancel: function(){
+
+        }
+    });
+}
+

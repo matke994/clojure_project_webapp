@@ -2,7 +2,10 @@
   (:require
     [clostache.parser :as clostache]
     [clojure-project-webapp.domain.file :as file-domain]
-    [clojure-project-webapp.domain.transaction :as transaction-domain]))
+    [clojure-project-webapp.domain.transaction :as transaction-domain]
+    [clojure-project-webapp.domain.bank :as bank-domain]
+    [clojure-project-webapp.domain.customer :as customer-domain]
+    ))
 
 (defn read-template [template-name]
   (slurp (clojure.java.io/resource
@@ -24,6 +27,12 @@
 (defn allFiles []
   (render-template "allFiles" {:file (file-domain/allFiles)}))
 
+(defn allBanks []
+  (render-template "allBanks" {:bank (bank-domain/allBanks)}))
+
+(defn allCustomers []
+  (render-template "allCustomers" {:customer (customer-domain/allCustomers)}))
+
 (defn transactions[]
   (render-template "transactions" {:transaction (transaction-domain/allTransactions)}))
 
@@ -35,5 +44,13 @@
 
 (defn updatingFile [id]
   (render-template "updateFile" {:file (file-domain/get id)}))
+
+(defn updatingBank [id]
+  (render-template "updateBank" {:bank (bank-domain/get id)}))
+
+(defn updatingCustomer [id]
+  (render-template "updateCustomer" {:customer (customer-domain/get id)}))
+
+
 
 
